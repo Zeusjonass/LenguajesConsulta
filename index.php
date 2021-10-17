@@ -18,7 +18,7 @@ include("./src/busqueda.php");
             <form action="./index.php" method="GET">
                 <label for="filtro">
                     Buscador:
-                    <input id="busqueda" name="busqueda" type="text" placeholder="ej. Sales">
+                    <input id="busqueda" name="busqueda" type="text">
                 </label<br><br><br>
                 <input type="submit" value="Buscar">
             </form>
