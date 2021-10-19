@@ -1,5 +1,6 @@
 <?php
   include("./tfIdf.php");
+
   function sinCampos($input) {
     $tableToSearch = "terms";
     $query = "SELECT * FROM {$tableToSearch} WHERE ";
@@ -29,7 +30,7 @@
           break;
       }
     }
-
+  
     $resultados = consultar($query);
     $totalArray = Array();
     foreach ($resultados as $term) {
@@ -38,12 +39,12 @@
       $totalArray = array_merge($totalArray, $docTFIDF);
     }
 
-    var_dump($totalArray);
-
     foreach($totalArray as $doc) {
       $name = key($doc);
       $TFIDF = $doc[$name];
-      echo "<div>Name: {$name} ----- Ranking: {$TFIDF} </div>";
+      echo "<div>Nombre del archivo: </div>";
+      echo "<a href='./uploadFiles/{$name}' download >{$name} </a> <br/>";
+      
     }
   }
 

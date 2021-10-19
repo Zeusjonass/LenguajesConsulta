@@ -12,6 +12,7 @@ function subeArchivos(){
         $destination_path = getcwd().DIRECTORY_SEPARATOR;
         $file_name = basename( $_FILES["upload"]["name"][$i]);
         $target_path = $destination_path . 'uploadFiles/' . $file_name;
+        echo $target_path;
        
         if (file_exists($target_path)) {
             echo "<li> Sorry, file " . $file_name . " already exists. </li>";

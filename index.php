@@ -1,7 +1,9 @@
 <?php
+
 include("./src/busqueda.php");
 include("./src/tfIdf.php");
 include("./src/upload.php");
+
 ?>
 <html>
     <head>
@@ -30,7 +32,7 @@ include("./src/upload.php");
             }
             ?>
             <hr>
-            <h1>Buscador Northwind</h1>
+            <h1>Buscador de palabras en archivos</h1>
             <form action="./index.php" method="GET">
                 <label>
                     Buscador:
@@ -40,7 +42,7 @@ include("./src/upload.php");
             </form>
         </div> 
         <div id="resultados">
-            <p>Resultados de <?php echo $_GET["busqueda"];?>:</p>
+            <p>Resultado de la búsqueda de "<?php echo $_GET["busqueda"];?>":</p>
             <?php
             if(isset( $_GET["busqueda"] )) {
                 $input = $_GET["busqueda"];

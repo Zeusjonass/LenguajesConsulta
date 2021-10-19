@@ -17,7 +17,7 @@
     
 
     function conectarBD() {
-        $conexion = mysqli_connect("localhost", "root", "06201725Pu.", "inverseIndex");
+        $conexion = mysqli_connect("localhost", "root", "", "inverseIndex");
         return $conexion;
     }
 
