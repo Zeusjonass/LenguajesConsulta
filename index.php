@@ -1,5 +1,6 @@
 <?php
 include("./src/busqueda.php");
+include("./src/tfIdf.php");
 include("./src/upload.php");
 ?>
 <html>
