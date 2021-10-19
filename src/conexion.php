@@ -8,7 +8,7 @@
     }
 
     function conectarBD() {
-        $conexion = mysqli_connect("localhost", "root", "", "northwind");
+        $conexion = mysqli_connect("localhost", "root", "06201725Pu.", "inverseIndex");
         return $conexion;
     }
 
