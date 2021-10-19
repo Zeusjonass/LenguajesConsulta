@@ -1,6 +1,7 @@
 <?php
 include("./src/busqueda.php");
 include("./src/tfIdf.php");
+include("./src/upload.php");
 ?>
 <html>
     <head>
@@ -15,12 +16,26 @@ include("./src/tfIdf.php");
     </head>
     <body>
         <div id="container">
+            <h1>Subida de archivos</h1>
+            <form action="./index.php" method="post" enctype="multipart/form-data">
+                <label>Seleccione los archivos .txt que desee subir:</label>
+                <br>
+                <input name="upload[]" type="file" multiple="multiple"  accept=".txt">
+                <br><br>
+                <input type="submit" value="Subir">
+            </form>
+            <?php
+             if(isset( $_FILES['upload']['name'] )) {
+                subeArchivos();
+            }
+            ?>
+            <hr>
             <h1>Buscador Northwind</h1>
             <form action="./index.php" method="GET">
-                <label for="filtro">
+                <label>
                     Buscador:
                     <input id="busqueda" name="busqueda" type="text">
-                </label<br><br><br>
+                </label><br><br>
                 <input type="submit" value="Buscar">
             </form>
         </div> 

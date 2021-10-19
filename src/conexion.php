@@ -7,6 +7,15 @@
         return $resultado;
     }
 
+    function insertar($query) {
+        $conexion = conectarBD();
+        $query = mysqli_query($conexion, $query);
+        $id = $conexion->insert_id;
+        desconectarBD($conexion);
+        return $id;
+    }
+    
+
     function conectarBD() {
         $conexion = mysqli_connect("localhost", "root", "06201725Pu.", "inverseIndex");
         return $conexion;
